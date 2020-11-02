@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/dotnet/core/sdk
+image: mcr.microsoft.com/dotnet/core/sdk:3.
 stages:
   - build
   - test
@@ -12,7 +12,7 @@ test:
   stage: test
   script:
     - 'dotnet test test/test.csproj'
-piblish:
+publish:
   stage: publish
   script:
     - 'dotnet publish CustomerAPI/CustomerAPI.csproj'
